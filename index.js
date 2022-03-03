@@ -1,15 +1,17 @@
 let kebab = {
     ingredients: [
-        "salad",
+        "chicken",
         "tomato",
         "onions",
-        "white sauce"
+        "white sauce",
+        "egg"
     ]
 }
 
 let meats = [
     "lamb",
     "egg",
+    "chicken"
 ];
 
 let pessis = [
@@ -20,8 +22,8 @@ let pessis = [
 let isVegan = true;
 let isPessi = true;
 
-meats.every(element => {
-    if (kebab.ingredients.includes(element)) {
+kebab.ingredients.every(element => {
+    if (meats.includes(element)) {
         isVegan = false;
     }
 });
@@ -32,8 +34,8 @@ if (isVegan) {
     console.log("Kebab is not vegan");
 }
 
-pessis.every(element => {
-    if (kebab.ingredients.includes(element)) {
+kebab.ingredients.every(element => {
+    if (pessis.includes(element)) {
         pessis = false;
     }
 });
