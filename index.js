@@ -12,7 +12,7 @@ let pessis = [
 ]
 
 let hasSauce = false;
-let hasCheese = false;
+let cheese = 0;
 let hasOnions = false;
 
 let isVegan = true;
@@ -55,13 +55,15 @@ if (hasSauce) {
 }
 
 kebab.ingredients.forEach(element => {
-    if (element.includes("cheese")) {
-        haveCheese = true;
+    if (element.includes("double cheese")) {
+        cheese = cheese*2;
+    } else if (element.includes("cheese")) {
+        cheese++;
     }
 });
 
-if (hasCheese) {
-    console.log("Kebab has cheese");
+if (cheese > 0) {
+    console.log(`Kebab has ${cheese} cheese`);
 } else {
     console.log("Kebab has not cheese");
 }
